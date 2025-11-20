@@ -1,2 +1,7 @@
 @import "tailwindcss";
 
+@layer components {
+    .responsivewidth {
+      @apply mx-auto w-[90%] sm:w-[90%] md:w-[88%] lg:w-[80%];
+    }
+  }
