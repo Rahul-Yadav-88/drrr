@@ -2,7 +2,7 @@ import React from "react";
 
 export default function Section4() {
   return (
-    <section className=" bg-white responsivewidth">
+    <section className=" bg-white  mt-20">
       <div className="responsivewidth  flex flex-col md:flex-row items-start gap-10">
 
         {/* LEFT IMAGE */}
@@ -10,17 +10,17 @@ export default function Section4() {
           <img
             src="/doc.png"
             alt="doctor"
-            className="w-[260px] h-[260px] md:w-[330px] md:h-[330px] object-cover rounded-md"
+            className="w-[260px] h-[260px] md:w-[330px] md:h-[330px] object-cover "
           />
         </div>
 
         {/* RIGHT CONTENT */}
         <div className="w-full md:w-[70%]">
-          <h3 className="text-[#5F869A] text-xl font-semibold mb-3 border-b border-[#5F869A] w-fit pb-1">
+          <h3 className="text-[#5F869A] text-xl font-semibold mb-10 border-b border-[#5F869A] w-fit pb-1">
             Areas of Expertise
           </h3>
 
-          <p className="text-[#5F869A] text-[18px] leading-relaxed md:pr-10">
+          <p className="text-[#5F869A] text-[22px] font-bold leading-relaxed md:pr-10">
             Leading Consultant Pediatrician with 28 years of experience in General
             Pediatrics, Neonatology, and Pediatric Intensive Care. Trusted for
             compassionate, evidence-based care.

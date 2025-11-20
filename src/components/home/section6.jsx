@@ -1,0 +1,99 @@
+import React from "react";
+
+
+const Section6 = () => {
+    // cardsData.js
+const cardsData = [
+  {
+    title: "Newborn & Neonatal Care",
+    image: "/card1.png",
+    description:
+      "Comprehensive care for newborns, including premature babies and NICU-level support. Expert in neonatal resuscitation, ventilation, surfactant therapy, and management of high-risk newborn conditions.",
+  },
+  {
+    title: "General Pediatrics",
+    image: "/card2.png",
+    description:
+      "Complete medical care for infants, children, and adolescents—covering infections, allergies, nutrition, growth, development, vaccinations, and long-term pediatric health.",
+  },
+  {
+    title: "Pediatric Intensive Care",
+    image: "/card3.png",
+    description:
+      "Advanced management of critically ill children, including respiratory failure, sepsis, trauma, and emergencies. Skilled in ventilation, PICU protocols, and multidisciplinary critical care.",
+  },
+];
+
+  return (
+    <div className="w-full bg-[#F7F8F9] py-20 px-6">
+      {/* Title */}
+      <h2 className="text-center text-2xl md:text-3xl font-semibold text-[#5B8291] mb-6">
+        Why Choose Dr. Gaurav Jadon
+      </h2>
+
+      {/* Description */}
+      <div className="max-w-4xl mx-auto text-center text-[#5B8291] space-y-5 leading-relaxed">
+        <p>
+          Dr. Gaurav Jadon brings 28 years of pediatric expertise across India,
+          Kuwait, and the UAE. His practice blends clinical excellence,
+          compassion, and evidence-based care, making him a trusted pediatrician
+          for families across the region.
+        </p>
+
+        <p>
+          With strong expertise in General Pediatrics, Neonatology, and
+          Pediatric Intensive Care, he has managed a wide range of complex
+          newborn and childhood conditions. Dr. Jadon has cared for premature
+          babies, critically ill children, and acute emergencies while guiding
+          routine pediatric care, growth monitoring, and preventive health.
+        </p>
+
+        <p>
+          In addition to his clinical work, he has played an active role in
+          training medical residents, leading clinical audits, and contributing
+          to international research. His commitment to quality improvement
+          reflects his dedication to raising pediatric care standards.
+        </p>
+
+        <p>
+          He offers expert care across a broad spectrum of pediatric and
+          neonatal conditions, providing comprehensive support from infancy
+          through adolescence.
+        </p>
+      </div>
+
+      {/* Cards Section */}
+      <div className="grid grid-cols-1 md:grid-cols-3 gap-6 max-w-5xl mx-auto mt-16">
+
+        {cardsData.map((card, index) => (
+          <div
+            key={index}
+            className="bg-[#E8E8E8] rounded-xl shadow-sm hover:shadow-md transition p-5"
+          >
+            <img
+              src={card.image}
+              alt={card.title}
+              className="w-full h-48 object-cover rounded-lg mb-4"
+            />
+
+            <h3 className="font-bold text-xl mb-2">{card.title}</h3>
+
+            <p className="text-[#5B8291] text-lg leading-relaxed">
+              {card.description}
+            </p>
+          </div>
+        ))}
+
+      </div>
+
+      {/* View more button */}
+      <div className="flex justify-center mt-10">
+        <button className="bg-[#2E424D] text-[#5B8291] px-8 py-3 rounded-md hover:bg-[#1b2d3d] transition">
+          VIEW MORE
+        </button>
+      </div>
+    </div>
+  );
+};
+
+export default Section6;
