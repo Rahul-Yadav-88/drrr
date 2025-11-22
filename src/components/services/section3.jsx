@@ -22,7 +22,7 @@ export default function SpecialtySection() {
   },
   {
     title: "Care of childern from 1 month of age to 18 years",
-    desc: "Routine newborn checkups, growth monitoring, and vaccinations.",
+    desc: "Routine Care of childern from 1 month of age to 18 years checkups, growth monitoring, and vaccinations.",
     img: "/img4.png",
   },
   {

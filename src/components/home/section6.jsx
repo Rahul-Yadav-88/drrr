@@ -6,10 +6,10 @@ const Section6 = () => {
     // cardsData.js
 const cardsData = [
   {
-    title: "Newborn & Neonatal Care",
+    title: "children care",
     image: "/card1.png",
     description:
-      "Comprehensive care for newborns, including premature babies and NICU-level support. Expert in neonatal resuscitation, ventilation, surfactant therapy, and management of high-risk newborn conditions.",
+      "Comprehensive care for Care of childern from 1 month of age to 18 years, including premature babies and NICU-level support. Expert in neonatal resuscitation, ventilation, surfactant therapy, and management of high-risk Care of childern from 1 month of age to 18 years conditions.",
   },
   {
     title: "General Pediatrics",

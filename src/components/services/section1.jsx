@@ -10,7 +10,7 @@ export default function Section1() {
     },
     {
       title: "Care of childern from 1 month of age to 18 years",
-      desc: "Expert care for premature babies, high-risk newborns, and infants requiring specialized monitoring. Ensuring safe, stable, and family-centered neonatal support from birth onward.",
+      desc: "Expert care for premature babies, high-risk Care of childern from 1 month of age to 18 yearss, and infants requiring specialized monitoring. Ensuring safe, stable, and family-centered neonatal support from birth onward.",
       img: "/2.jpg",
     },
   ];
@@ -26,7 +26,7 @@ export default function Section1() {
         <p className="mt-3 text-sm md:text-base leading-relaxed text-gray-700">
           With 28 years of clinical expertise across India, Kuwait, and the UAE,
           Dr. Gaurav Jadon provides safe, compassionate, and evidence-based care for
-          newborns, infants, and children. His approach focuses on accurate diagnosis,
+          Care of childern from 1 month of age to 18 years, infants, and children. His approach focuses on accurate diagnosis,
           early intervention, and personalized treatment plans to ensure your child’s
           long-term health and well-being.
         </p>
