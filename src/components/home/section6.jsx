@@ -9,7 +9,7 @@ const cardsData = [
     title: "Children care",
     image: "/card1.png",
     description:
-      "Comprehensive care for Care of childern from 1 month of age to 18 years, including premature babies and NICU-level support. Expert in neonatal resuscitation, ventilation, surfactant therapy, and management of high-risk Care of childern from 1 month of age to 18 years conditions.",
+      "Comprehensive care for Care of childern from 1 month of age to 18 years, including premature babies and NICU-level support. Expert in ventilation, surfactant therapy, and management of high-risk Care of childern from 1 month of age to 18 years conditions.",
   },
   {
     title: "General Pediatrics",
@@ -58,7 +58,7 @@ const cardsData = [
 
         <p>
           He offers expert care across a broad spectrum of pediatric and
-          neonatal conditions, providing comprehensive support from infancy
+          providing comprehensive support from infancy
           through adolescence.
         </p>
       </div>

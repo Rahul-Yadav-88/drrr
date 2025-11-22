@@ -14,7 +14,7 @@ const cards = [
  {
   title: 'Schedule an Appointment',
   lines: [
-    'My Schedule of Working in Mediclinic Welcare Hospital',
+    // ' Mediclinic Welcare Hospital',
     'Friday & Saturday – Weekly Off',
     'Sunday – 10:00 AM to 7:00 PM',
     'Monday – 12:00 PM to 9:00 PM',

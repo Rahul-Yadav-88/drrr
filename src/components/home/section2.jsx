@@ -24,7 +24,7 @@ export default function Section2() {
             Dr. Gaurav Jadon is a highly experienced Consultant Pediatrician with 
             28 years of clinical expertise across India, Kuwait, and the UAE. 
             He specializes in General Pediatrics and Pediatric Intensive 
-            Care, offering compassionate and evidence-based care for , 
+            Care, offering compassionate and evidence-based care for 
             infants, and children from 1 month of age to 18 years.
           </p>
 
