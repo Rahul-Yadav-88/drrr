@@ -43,8 +43,8 @@ const cardsData = [
 
         <p>
           With strong expertise in General Pediatrics and
-          Pediatric Intensive Care, he has managed a wide range of complex
-          newborn and childhood conditions. Dr. Jadon has cared for premature
+          Pediatric Intensive Care, he has managed a wide range of complex infants and
+          children from 1 month of age to 18 years and childhood conditions. Dr. Jadon has cared for premature
           babies, critically ill children, and acute emergencies while guiding
           routine pediatric care, growth monitoring, and preventive health.
         </p>
