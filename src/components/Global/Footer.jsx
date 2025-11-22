@@ -21,7 +21,7 @@ export default function Footer() {
 
         <div className="bg-[#30515E] p-8  text-center text-[#98DAD9]">
           <h4 className="font-semibold">To book an appointment, call us on</h4>
-          <p className="text-sm font-medium mt-1">+91 9701757017</p>
+          <p className="text-sm font-medium mt-1">8001999</p>
         </div>
       </div>
 
@@ -49,14 +49,14 @@ export default function Footer() {
 
     <div className="flex items-center gap-2 mt-4 text-sm opacity-80 text-[#5B8291]">
       <Mail className="w-5 h-5" />
-      <a href="mailto:dr.b.vivekananda@gmail.com" className="underline text-lg">
-        dr.b.vivekananda@gmail.com
+      <a href="mailto:Gaurav.jadon@mediclinic.ae" className="underline text-lg">
+        Gaurav.jadon@mediclinic.ae
       </a>
     </div>
 
     <div className="flex items-center gap-2 mt-3  opacity-80 text-[#5B8291] text-lg">
       <Phone className="w-5 h-5" />
-      <span>+91 9701757017</span>
+      <span> 8001999 </span>
     </div>
   </div>
 
