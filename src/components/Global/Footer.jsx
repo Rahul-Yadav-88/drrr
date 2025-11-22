@@ -43,8 +43,7 @@ export default function Footer() {
     <div className="flex items-start gap-3 text-sm opacity-80 text-[#5B8291]">
       <MapPin className="w-10 h-10 mt-1" />
       <p className="text-lg">
-        Flat no 101, Madhura Heights, 1st floor, opposite Bank of Baroda,
-        Rajeev Nagar, Hyderabad, Telangana – 500018 .
+        Opp. GEMS Legacy School, Al Garhoud (near GGICO Metro)
       </p>
     </div>
 
