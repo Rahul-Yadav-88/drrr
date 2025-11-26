@@ -78,7 +78,7 @@ export default function ContactSection() {
           height="100%"
           loading="lazy"
           referrerPolicy="no-referrer-when-downgrade"
-          src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3958.9270839999997!2d106.8219!3d-6.1862!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x2e69f5bf409!2sKebon%20Kacang!5e0!3m2!1sen!2sid!4v1700000000000">
+          src="https://www.google.com/maps/embed?pb=!1m16!1m12!1m3!1d3559.02020839374!2d55.33788701531049!3d25.246952388779494!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!2m1!1sMediclinic%20Welcare%20Hospital%20Dubai!5e0!3m2!1sen!2sin!4v1764164227366!5m2!1sen!2sin">
         </iframe>
       </div>
     </div>
