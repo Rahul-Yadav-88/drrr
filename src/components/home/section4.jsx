@@ -22,16 +22,15 @@ export default function Section4() {
           </h3>
 
           <p className="text-[#5F869A] text-[22px] font-bold leading-relaxed md:pr-10">
-            Leading Consultant Pediatrician with 28 years of experience in General
-            Pediatrics and Pediatric Intensive Care. Trusted for
-            compassionate, evidence-based care.
+            General <br />
+            Pediatrics, Pediatric emergency, Childhood Asthma, vaccinations and Adolescent care (1month to 18 years of age )
           </p>
 
-        <Link href="/about">
-  <button className="mt-8 bg-[#29495E] text-white px-8 py-3 rounded-md text-sm tracking-widest hover:bg-[#1f3747] transition">
-    READ MORE
-  </button>
-</Link>
+          <Link href="/about">
+            <button className="mt-8 bg-[#29495E] text-white px-8 py-3 rounded-md text-sm tracking-widest hover:bg-[#1f3747] transition">
+              READ MORE
+            </button>
+          </Link>
 
 
         </div>

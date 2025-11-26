@@ -2,27 +2,28 @@ import React from 'react';
 
 const cards = [
   {
-  title: 'Clinic Location',
+  title: 'Hospital Location',
   lines: [
     'Mediclinic Welcare Hospital',
     'Garhoud, Dubai',
     'Providing comprehensive pediatric & emergency care in a modern clinical environment.'
   ],
-  action: { label: 'CONTACT US', href: '/contact' }
+  // action: { label: 'CONTACT US', href: '/contact' }
 },
 
  {
   title: 'Schedule an Appointment',
   lines: [
-    // ' Mediclinic Welcare Hospital',
-    'Friday & Saturday – Weekly Off',
-    'Sunday – 10:00 AM to 7:00 PM',
-    'Monday – 12:00 PM to 9:00 PM',
-    'Tuesday – 9:00 AM to 6:00 PM',
-    'Wednesday – 9:00 AM to 6:00 PM',
-    'Thursday – 9:00 AM to 6:00 PM',
-    'Please book your appointments accordingly.'
-  ],
+    // // ' Mediclinic Welcare Hospital',
+    // 'Friday & Saturday – Weekly Off',
+    // 'Sunday – 10:00 AM to 7:00 PM',
+    // 'Monday – 12:00 PM to 9:00 PM',
+    // 'Tuesday – 9:00 AM to 6:00 PM',
+    // 'Wednesday – 9:00 AM to 6:00 PM',
+    // 'Thursday – 9:00 AM to 6:00 PM',
+    // 'Please book your appointments accordingly.'
+    'Call Mediclinic toll free no 8001999 or Download Mediclinic app to book online appointment'
+],
   action: null
 },
 

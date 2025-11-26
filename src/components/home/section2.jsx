@@ -4,32 +4,31 @@ export default function Section2() {
   return (
     <section className="w-full bg-white py-16 px-6 md:px-20">
       <div className="max-w-7xl mx-auto grid md:grid-cols-2 gap-12">
-        
+
         {/* LEFT NAME + DEGREE */}
         <div>
-  <h2 className="text-[#5B8291] text-2xl md:text-3xl font-bold leading-snug">
-    Dr. <br />
-    Gaurav Jadon <br />
-    European Board of Pediatrics <br />
-    DNB Pediatrics, DCH, MBBS <br />
-    Care of children from 1 month of age to 18 years <br />
-    Pediatric emergency care
-  </h2>
-</div>
+          <h2 className="text-[#5B8291] text-2xl md:text-3xl font-bold leading-snug">
+            Dr. <br />
+            Gaurav Jadon <br />
+            European Board of Pediatrics <br />
+            DNB Pediatrics, DCH, MBBS <br />
+
+          </h2>
+        </div>
 
 
         {/* RIGHT PARAGRAPHS */}
         <div className="text-[#5B8291] text-[20px] leading-relaxed">
           <p>
-            Dr. Gaurav Jadon is a highly experienced Consultant Pediatrician with 
-            28 years of clinical expertise across India, Kuwait, and the UAE. 
-            He specializes in General Pediatrics and Pediatric Intensive 
-            Care, offering compassionate and evidence-based care for 
-            infants, and children from 1 month of age to 18 years.
+            Dr. Gaurav has over 28 years of post-specialization experience across India, Kuwait, and the UAE.
+            He specializes in General Pediatrics and Pediatric Emergency Care, with a special interest in Adolescent health and Preventive care combining clinical expertise with academic leadership.
+          </p>
+          <p className="mt-6">
+            He is certified by the European Board of Pediatrics previously worked in NMC Specialty Hospital (Dubai) for the past 14.5 years. Dr. Gaurav actively contributes to teaching, clinical audits and international research forums. Passionate about pediatric education and evidence-based practice, he continues to advance child health standards in the GCC region through compassionate care and lifelong learning.
           </p>
 
           <p className="mt-6">
-            He currently serves Mediclinic Welcare hospital Garhoud Dubai and is recognized for 
+            He currently serves Mediclinic Welcare hospital Garhoud Dubai and is recognized for
             his commitment to child health, medical education, and international research.
           </p>
         </div>
