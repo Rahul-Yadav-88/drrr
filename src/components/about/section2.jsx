@@ -11,7 +11,7 @@ const Section2 = () => {
         {/* left*/}
         <div className="w-full md:w-1/2">
           <h2 className="text-[#000000] font-bold text-3xl md:text-4xl leading-snug max-w-sm">
-            DR.<br />
+            DR.
             Gaurav Jadon<br />
             MBBS, DCH, DNB<br />
             Pediatrics, EBP<br />

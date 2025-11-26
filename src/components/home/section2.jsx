@@ -8,7 +8,7 @@ export default function Section2() {
         {/* LEFT NAME + DEGREE */}
         <div>
           <h2 className="text-[#5B8291] text-2xl md:text-3xl font-bold leading-snug">
-            Dr. <br />
+            Dr. 
             Gaurav Jadon <br />
             European Board of Pediatrics <br />
             DNB Pediatrics, DCH, MBBS <br />
