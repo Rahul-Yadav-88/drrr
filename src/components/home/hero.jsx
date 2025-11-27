@@ -12,9 +12,9 @@ const HeroSection = () => {
 
     
       <Image
-        src="/hero.png"   
+        src="/oo.png"   
         alt="hero"
-        fill
+        fill 
         className="object-cover"
       />
 
