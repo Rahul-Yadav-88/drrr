@@ -9,7 +9,7 @@ const cardsData = [
     title: "Children care",
     image: "/card1.png",
     description:
-      "Comprehensive care for Care of childern from 1 month of age to 18 years and management of high-risk Care of childern from 1 month of age to 18 years conditions.",
+      "Comprehensive care for Children from 1 month to 18 years of age including management of high risk and complicated cases.",
   },
   {
     title: "General Pediatrics",
@@ -42,8 +42,7 @@ const cardsData = [
         </p>
 
         <p>
-          With strong expertise in General Pediatrics and
-          Pediatric Intensive Care, he has managed a wide range of complex infants and
+          With strong expertise in General Pediatrics, he has managed a wide range of complex infants and
           children from 1 month of age to 18 years and childhood conditions. Dr. Jadon has cared for premature
           babies, critically ill children, and acute emergencies while guiding
           routine pediatric care, growth monitoring, and preventive health.

@@ -23,9 +23,9 @@ const Section2 = () => {
         <div className="w-full md:w-1/2">
           <p className="text-[#000000] text-[18px] leading-relaxed opacity-90">
             Dr. Gaurav Jadon is an experienced Consultant Pediatrician with 28 years of clinical
-            practice across India, Kuwait, and the UAE. He specializes in General Pediatrics(remove pediatric emergency care )providing safe compassionate and evidence based care of children from 1 month to 18 years of age .
+            practice across India, Kuwait, and the UAE. He specializes in General Pediatrics providing safe compassionate and evidence based care of children from 1 month to 18 years of age .
             <br /><br />
-            Over the years, he has managed a wide range of pediatric and neonatal conditions, pediatric emergencies and complex critical cases, pediatric emergencies, and complex critical cases.
+            Over the years, he has managed a wide range of pediatric and complex critical cases, pediatric emergencies, and complex critical cases.
             His calm approach, strong clinical judgment, and commitment to medical excellence have
             earned the trust of families and colleagues alike.
             <br /><br />
