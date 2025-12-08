@@ -45,7 +45,13 @@ export default function Navbar() {
       </div>
 
       {/* CENTER LOGO - Made smaller for mobile */}
-      
+      <div className="md:flex hidden justify-center ">
+        <img 
+          src="/drlogo.jpeg" 
+          alt="Dr Gaurav Jadon Logo" 
+          className="w-14 h-14 md:w-20 md:h-20 object-contain rounded-full p-1 md:p-2"
+        />
+      </div>
 
       {/* Desktop Menu */}
       <ul className="hidden md:flex gap-8 lg:gap-10 text-[#5B8291]">
