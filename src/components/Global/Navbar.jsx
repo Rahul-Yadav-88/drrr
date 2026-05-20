@@ -9,7 +9,6 @@ const navLinks = [
   { name: "Home", href: "/" },
   { name: "About", href: "/about" },
   { name: "Services", href: "/services" },
-  // { name: "Research", href: "/research" },
   { name: "Contact", href: "/contact" },
 ];
 
@@ -17,38 +16,45 @@ export default function Navbar() {
   const [open, setOpen] = useState(false);
   const pathname = usePathname();
 
-  // 🔒 Disable scroll when mobile menu is open
   useEffect(() => {
     if (open) {
-      document.body.style.overflow = "hidden"; // stop scrolling
+      document.body.style.overflow = "hidden";
     } else {
-      document.body.style.overflow = "auto"; // allow scrolling again
+      document.body.style.overflow = "auto";
     }
 
     return () => {
-      document.body.style.overflow = "auto"; // cleanup
+      document.body.style.overflow = "auto";
     };
   }, [open]);
 
   return (
-    <nav className="relative w-full py-4 px-6 flex justify-between items-center bg-white shadow-sm z-50">
-      
-      {/* Left Logo Section */}
+    <nav className=" w-full py-2  px-3 md:px-6 flex justify-between items-center bg-white shadow-sm z-50">
+      {/* Left Logo Section - Reduced text size for mobile */}
       <div className="flex flex-col">
-        <h1 className="text-[22px] font-semibold text-[#5B8291]">
+        <h1 className="text-lg md:text-[22px] font-semibold text-[#5B8291]">
           Dr. Gaurav Jadon
         </h1>
 
         <div className="flex items-center gap-2 -mt-1">
-          <div className="h-[2px] w-14 bg-[#5B8291]"></div>
-          <span className="text-xs font-bold text-[#5B8291]">
+          <div className="h-[2px] w-10 md:w-14 bg-[#5B8291]"></div>
+          <span className="text-[10px] md:text-xs font-bold text-[#5B8291]">
             Consultant Pediatrician
           </span>
         </div>
       </div>
 
+      {/* CENTER LOGO - Made smaller for mobile */}
+      <div className="md:flex hidden justify-center ">
+        <img 
+          src="/drlogo.jpeg" 
+          alt="Dr Gaurav Jadon Logo" 
+          className="w-14 h-14 md:w-20 md:h-20 object-contain rounded-full p-1 md:p-2"
+        />
+      </div>
+
       {/* Desktop Menu */}
-      <ul className="hidden md:flex gap-10 text-[#5B8291]">
+      <ul className="hidden md:flex gap-8 lg:gap-10 text-[#5B8291]">
         {navLinks.map((link) => {
           const isActive = pathname === link.href;
 
@@ -71,12 +77,19 @@ export default function Navbar() {
 
       {/* Mobile Menu Icon */}
       <button className="md:hidden" onClick={() => setOpen(!open)}>
-        {open ? <X size={26} /> : <Menu size={26} />}
+        {open ? <X size={24} /> : <Menu size={24} />}
       </button>
 
       {/* Mobile Dropdown */}
       {open && (
-        <ul className="absolute top-16 right-0 bg-white shadow-lg rounded p-4 flex flex-col gap-4 w-1/2 h-screen md:hidden text-slate-600 z-50">
+        <ul className="absolute top-14 right-0 bg-white shadow-lg rounded p-4 flex flex-col gap-3 w-1/2 h-screen md:hidden text-slate-600 z-50">
+          <div className="flex justify-center ">
+        <img 
+          src="/drlogo.jpeg" 
+          alt="Dr Gaurav Jadon Logo" 
+          className="w-14 h-14 md:w-20 md:h-20 object-contain rounded-full p-1 md:p-2"
+        />
+      </div>
           {navLinks.map((link) => {
             const isActive = pathname === link.href;
 
