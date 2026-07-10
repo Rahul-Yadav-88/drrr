@@ -1,176 +1,646 @@
 "use client";
+
 import Link from "next/link";
-import { Mail, Phone, MapPin, Instagram, Facebook, ArrowRight, Linkedin } from "lucide-react";
+import { motion } from "framer-motion";
+import {
+  Mail,
+  Phone,
+  MapPin,
+  Instagram,
+  Facebook,
+  ArrowRight,
+  Linkedin,
+} from "lucide-react";
 
-export default function Footer() {
-  return (
-    <>
-      {/* Social Media Sidebar - Hidden on mobile, shown on tablet+ */}
-      <div className=" flex fixed left-0 top-1/2 -translate-y-1/2 z-50 flex-col gap-0 shadow-lg">
-        <a
-          href="https://www.facebook.com/share/17mokYiMp5/?mibextid=wwXIfr"
-          target="_blank"
-          rel="noopener noreferrer"
-          className="bg-[#1877F2] p-3 hover:pl-5 transition-all duration-300 group"
-          aria-label="Facebook"
-        >
-          <Facebook className="w-6 h-6 text-white" />
-        </a>
-        
-        <a
-          href="https://www.instagram.com/drgauravjadon?igsh=MWg4dDRpOHNid2ZuNQ%3D%3D&utm_source=qr"
-          target="_blank"
-          rel="noopener noreferrer"
-          className="bg-gradient-to-br from-[#833AB4] via-[#E1306C] to-[#F56040] p-3 hover:pl-5 transition-all duration-300 group"
-          aria-label="Instagram"
-        >
-          <Instagram className="w-6 h-6 text-white" />
-        </a>
-        
-        <a
-          href="http://linkedin.com/in/gauravjadon"
-          target="_blank"
-          rel="noopener noreferrer"
-          className="bg-[#0A66C2] p-3 hover:pl-5 transition-all duration-300 group"
-          aria-label="LinkedIn"
-        >
-          <Linkedin className="w-6 h-6 text-white" />
-        </a>
-      </div>
 
-      
+const socialLinks = [
+  {
+    icon: Facebook,
+    link: "https://www.facebook.com/share/17mokYiMp5/?mibextid=wwXIfr",
+    bg: "bg-[#1877F2]",
+  },
+  {
+    icon: Instagram,
+    link: "https://www.instagram.com/drgauravjadon",
+    bg: "bg-gradient-to-br from-purple-600 via-pink-500 to-orange-400",
+  },
+  {
+    icon: Linkedin,
+    link: "http://linkedin.com/in/gauravjadon",
+    bg: "bg-[#0A66C2]",
+  },
+];
 
-      <footer className="w-full bg-[#1F1F1F] text-white px-10 pt-8 pb-6">
-        {/* Top Info Boxes */}
-        <div className="md:max-w-7xl max-w-70 mx-auto px-3 md:px-4 grid grid-cols-1 md:grid-cols-3 gap-2 md:gap-0">
-          <div className="bg-[#617C8B] p-4 md:p-8 text-center text-[#98DAD9]">
-            <h4 className="font-semibold text-sm md:text-base">Find a clinic near you</h4>
-            <p className="text-xs md:text-sm opacity-80">Find Us On Map</p>
-          </div>
 
-          <div className="bg-[#466774] p-4 md:p-8 text-center text-[#98DAD9]">
-            <h4 className="font-semibold text-sm md:text-base">Feel free to message us!</h4>
-            <p className="text-xs md:text-sm opacity-80">Send an Email</p>
-          </div>
 
-          <div className="bg-[#30515E] p-4 md:p-8 text-center text-[#98DAD9]">
-            <h4 className="font-semibold text-sm md:text-base">To book an appointment, call us on</h4>
-            <p className="text-sm md:text-base font-medium mt-1">8001999</p>
-          </div>
-        </div>
+const fadeUp = {
+  hidden:{
+    opacity:0,
+    y:40
+  },
 
-        {/* Main Footer Content */}
-        <div className="md:max-w-7xl max-w-70 mx-auto px-3 md:px-4 mt-8 md:mt-10 grid grid-cols-1 md:grid-cols-3 gap-6 md:gap-10 text-[#cbd5e1]">
-          {/* About Section */}
-          <div>
-            <h3 className="text-xl md:text-2xl font-semibold mb-3 text-[#5B8291]">About us</h3>
-            <p className="text-sm md:text-lg opacity-80 leading-relaxed text-[#5B8291]">
-              Dr. Gaurav Jadon is an experienced Consultant Pediatrician with 28 years of clinical practice across India, Kuwait, and the UAE. He specializes in General Pediatrics and Pediatric emergency, providing safe, compassionate, and evidence-based care for children from 1 month of age to 18 years and infants.
-            </p>
-          </div>
+  show:{
+    opacity:1,
+    y:0,
+    transition:{
+      duration:.7
+    }
+  }
+};
 
-          {/* Get In Touch */}
-          <div>
-            <h3 className="text-xl md:text-2xl font-semibold mb-3 text-[#5B8291]">Get in Touch</h3>
 
-            <div className="flex items-start gap-3 text-sm opacity-80 text-[#5B8291]">
-              <MapPin className="w-4 h-4 md:w-5 md:h-5 mt-1" />
-              <p className="text-sm md:text-lg">
-                Mediclinic Welcare Hospital opp Gems
-              </p>
-            </div>
 
-            <div className="flex items-center gap-2 mt-3 md:mt-4 text-sm opacity-80 text-[#5B8291]">
-              <Mail className="w-4 h-4 md:w-5 md:h-5" />
-              <a href="mailto:Gaurav.jadon@mediclinic.ae" className="underline text-sm md:text-lg">
-                Gaurav.jadon@mediclinic.ae
-              </a>
-            </div>
+export default function Footer(){
 
-            <div className="flex items-center gap-2 mt-3 opacity-80 text-[#5B8291] text-sm md:text-lg">
-              <Phone className="w-4 h-4 md:w-5 md:h-5" />
-              <span>8001999</span>
-            </div>
-            <div className="flex items-center gap-2 mt-3 opacity-80 text-[#5B8291] text-sm md:text-lg">
-              <Phone className="w-4 h-4 md:w-5 md:h-5" />
-              <span>0505870574</span>
-            </div>
-          </div>
 
-          {/* Additional Links */}
-          <div className="text-[#5B8291]">
-            <h3 className="text-xl md:text-2xl font-semibold mb-3">Additional Link</h3>
-            <ul className="space-y-2 text-sm md:text-lg opacity-90">
-              <li><Link href="/services" className="hover:text-white">&gt; Service</Link></li>
-              <li><Link href="/about" className="hover:text-white">&gt; About</Link></li>
-              <li><Link href="/contact" className="hover:text-white">&gt; Contact</Link></li>
-            </ul>
-          </div>
-        </div>
+return (
 
-        {/* Appointment Form */}
-        <div className="md:max-w-3xl max-w-70 w-full mx-auto mt-8 md:mt-10 p-3 md:p-4">
-          <h3 className="text-2xl md:text-3xl font-bold text-[#5B8291] mb-2 text-center md:text-left">
-            Schedule An Appointment
-          </h3>
+<footer className="
+relative
+overflow-hidden
+bg-gradient-to-b
+from-[#162833]
+via-[#1F1F1F]
+to-black
+text-white
+px-6
+pt-20
+pb-8
+">
 
-          <div className="h-[2px] w-16 md:w-20 bg-[#9DB4C0] mb-6 mx-auto md:mx-0"></div>
 
-          <form className="space-y-4 md:space-y-5">
-            <div className="grid grid-cols-1 md:grid-cols-2 gap-3 md:gap-4">
-              <input
-                type="text"
-                placeholder="First Name"
-                className="bg-white w-full py-2 md:py-3 px-3 md:px-4 rounded-md text-black text-sm shadow-md focus:outline-none"
-              />
-              <input
-                type="text"
-                placeholder="Last Name"
-                className="bg-white w-full py-2 md:py-3 px-3 md:px-4 rounded-md text-black text-sm shadow-md focus:outline-none"
-              />
-            </div>
+{/* Background Glow */}
 
-            <div className="grid grid-cols-1 md:grid-cols-2 gap-3 md:gap-4">
-              <input
-                type="text"
-                placeholder="Phone Number"
-                className="bg-white w-full py-2 md:py-3 px-3 md:px-4 rounded-md text-black text-sm shadow-md focus:outline-none"
-              />
-              <input
-                type="email"
-                placeholder="Email"
-                className="bg-white w-full py-2 md:py-3 px-3 md:px-4 rounded-md text-black text-sm shadow-md focus:outline-none"
-              />
-            </div>
+<div className="
+absolute
+top-0
+left-0
+h-72
+w-72
+rounded-full
+bg-cyan-400/10
+blur-[120px]
+"/>
 
-            <Link href="/contact">
-              <button
-                className="w-full md:w-auto mx-auto bg-[#2E424D] px-6 md:px-10 py-2 md:py-3 rounded-md shadow-lg transition-all flex items-center justify-center gap-2 text-[#5B8291]"
-              >
-                Submit <ArrowRight size={18} />
-              </button>
-            </Link>
-          </form>
-        </div>
 
-        {/* Bottom Footer */}
-        <div className="border-t border-white/20 mt-8 md:mt-10 pt-4 max-w-7xl mx-auto px-3 md:px-4 flex flex-col md:flex-row justify-between items-center gap-3 md:gap-4">
-          <p className="text-xs opacity-70 text-center md:text-left">
-            © 2023 Dr. Gaurav Jadon. All rights reserved.
-          </p>
+<div className="
+absolute
+bottom-0
+right-0
+h-80
+w-80
+rounded-full
+bg-blue-400/10
+blur-[140px]
+"/>
 
-          <div className="flex gap-4 md:gap-6 text-xs opacity-80">
-            <Link href="#" className="hover:text-white">Privacy</Link>
-            <Link href="#" className="hover:text-white">Terms</Link>
-            <Link href="#" className="hover:text-white">Sitemap</Link>
-          </div>
 
-          <div className="flex gap-4">
-            <Instagram className="w-4 h-4 md:w-5 md:h-5 cursor-pointer hover:opacity-100 opacity-70" />
-            <Facebook className="w-4 h-4 md:w-5 md:h-5 cursor-pointer hover:opacity-100 opacity-70" />
-          </div>
-        </div>
-      </footer>
-    </>
-  );
+
+
+{/* Social Sidebar */}
+
+
+<motion.div
+
+initial={{
+x:-100
+}}
+
+animate={{
+x:0
+}}
+
+transition={{
+duration:.8
+}}
+
+className="
+fixed
+left-0
+top-1/2
+-translate-y-1/2
+z-50
+hidden
+md:flex
+flex-col
+overflow-hidden
+rounded-r-2xl
+shadow-2xl
+"
+
+>
+
+
+{socialLinks.map((item,index)=>{
+
+const Icon=item.icon;
+
+
+return (
+
+<a
+key={index}
+href={item.link}
+target="_blank"
+rel="noopener noreferrer"
+className={`
+${item.bg}
+p-4
+transition-all
+duration-300
+hover:pl-7
+`}
+>
+
+<Icon className="text-white w-6 h-6"/>
+
+</a>
+
+)
+
+})}
+
+
+</motion.div>
+
+
+
+
+
+
+
+{/* Top Cards */}
+
+
+<motion.div
+
+variants={fadeUp}
+initial="hidden"
+whileInView="show"
+viewport={{once:true}}
+
+className="
+max-w-7xl
+mx-auto
+grid
+grid-cols-1
+md:grid-cols-3
+gap-6
+"
+
+
+>
+
+
+{[
+
+{
+title:"Find a clinic near you",
+text:"Find Us On Map"
+},
+
+{
+title:"Feel free to message us!",
+text:"Send an Email"
+},
+
+{
+title:"Book an appointment",
+text:"8001999"
+}
+
+].map((item,index)=>(
+
+
+<div
+
+key={index}
+
+className="
+group
+rounded-3xl
+border
+border-white/20
+bg-white/10
+backdrop-blur-xl
+p-8
+text-center
+hover:-translate-y-2
+transition-all
+duration-500
+shadow-xl
+"
+
+>
+
+
+<h4 className="
+text-[#98DAD9]
+font-semibold
+text-lg
+">
+
+{item.title}
+
+</h4>
+
+
+<p className="
+mt-2
+text-white/70
+">
+
+{item.text}
+
+</p>
+
+
+</div>
+
+
+))}
+
+
+
+</motion.div>
+
+
+
+
+
+
+
+{/* Main Content */}
+
+
+<motion.div
+
+variants={fadeUp}
+initial="hidden"
+whileInView="show"
+viewport={{once:true}}
+
+className="
+max-w-7xl
+mx-auto
+mt-16
+grid
+grid-cols-1
+md:grid-cols-3
+gap-12
+"
+
+
+>
+
+
+{/* About */}
+
+
+<div>
+
+
+<h3 className="
+text-3xl
+font-bold
+text-[#5B8291]
+mb-5
+">
+
+About Us
+
+</h3>
+
+
+<p className="
+text-white/70
+leading-8
+">
+
+Dr. Gaurav Jadon is an experienced Consultant Pediatrician with
+28 years of clinical practice across India, Kuwait, and the UAE.
+He specializes in General Pediatrics and Pediatric emergency,
+providing safe, compassionate, and evidence-based care for children
+from 1 month of age to 18 years.
+
+</p>
+
+
+</div>
+
+
+
+
+
+
+{/* Contact */}
+
+
+<div>
+
+
+<h3 className="
+text-3xl
+font-bold
+text-[#5B8291]
+mb-5
+">
+
+Get In Touch
+
+</h3>
+
+
+<div className="space-y-5 text-white/70">
+
+
+<p className="flex gap-3">
+
+<MapPin/>
+Mediclinic Welcare Hospital opp Gems
+
+</p>
+
+
+<p className="flex gap-3">
+
+<Mail/>
+
+<a href="mailto:Gaurav.jadon@mediclinic.ae">
+Gaurav.jadon@mediclinic.ae
+</a>
+
+</p>
+
+
+<p className="flex gap-3">
+
+<Phone/>
+8001999
+
+</p>
+
+
+<p className="flex gap-3">
+
+<Phone/>
+0505870574
+
+</p>
+
+
+</div>
+
+
+</div>
+
+
+
+
+
+
+
+{/* Links */}
+
+
+<div>
+
+
+<h3 className="
+text-3xl
+font-bold
+text-[#5B8291]
+mb-5
+">
+
+Quick Links
+
+</h3>
+
+
+<ul className="
+space-y-4
+text-white/70
+">
+
+
+<li>
+<Link href="/services">
+→ Services
+</Link>
+</li>
+
+
+<li>
+<Link href="/about">
+→ About
+</Link>
+</li>
+
+
+<li>
+<Link href="/contact">
+→ Contact
+</Link>
+</li>
+
+
+</ul>
+
+
+</div>
+
+
+</motion.div>
+
+
+
+
+
+
+
+
+
+{/* Appointment */}
+
+
+
+<motion.div
+
+initial={{
+opacity:0,
+scale:.9
+}}
+
+whileInView={{
+opacity:1,
+scale:1
+}}
+
+transition={{
+duration:.8
+}}
+
+viewport={{once:true}}
+
+className="
+max-w-4xl
+mx-auto
+mt-20
+rounded-3xl
+bg-white/10
+border
+border-white/20
+backdrop-blur-xl
+p-8
+md:p-12
+"
+
+
+>
+
+
+<h3 className="
+text-3xl
+font-bold
+text-[#5B8291]
+text-center
+mb-8
+">
+
+Schedule An Appointment
+
+</h3>
+
+
+
+<form className="grid gap-5">
+
+
+<div className="grid md:grid-cols-2 gap-5">
+
+<input
+placeholder="First Name"
+className="inputStyle"
+/>
+
+
+<input
+placeholder="Last Name"
+className="inputStyle"
+/>
+
+
+</div>
+
+
+
+<div className="grid md:grid-cols-2 gap-5">
+
+<input
+placeholder="Phone Number"
+className="inputStyle"
+/>
+
+
+<input
+placeholder="Email"
+className="inputStyle"
+/>
+
+
+</div>
+
+
+
+<Link href="/contact">
+
+
+<button
+className="
+mx-auto
+flex
+items-center
+gap-3
+rounded-full
+bg-[#29495E]
+px-10
+py-4
+hover:scale-105
+transition
+"
+
+>
+
+Submit
+
+<ArrowRight size={18}/>
+
+</button>
+
+
+</Link>
+
+
+</form>
+
+
+</motion.div>
+
+
+
+
+
+
+
+{/* Bottom */}
+
+
+<div className="
+border-t
+border-white/20
+mt-12
+pt-6
+flex
+flex-col
+md:flex-row
+justify-between
+items-center
+gap-4
+text-white/60
+text-sm
+">
+
+
+<p>
+© 2023 Dr. Gaurav Jadon. All rights reserved.
+</p>
+
+
+<div className="flex gap-5">
+
+<Link href="#">
+Privacy
+</Link>
+
+<Link href="#">
+Terms
+</Link>
+
+<Link href="#">
+Sitemap
+</Link>
+
+
+</div>
+
+
+</div>
+
+
+
+</footer>
+
+)
+
 }

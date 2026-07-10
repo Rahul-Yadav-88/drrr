@@ -2,8 +2,9 @@
 
 import { useState, useEffect } from "react";
 import Link from "next/link";
-import { Menu, X } from "lucide-react";
+import { Menu, X, Calendar } from "lucide-react";
 import { usePathname } from "next/navigation";
+import { motion, AnimatePresence } from "framer-motion";
 
 const navLinks = [
   { name: "Home", href: "/" },
@@ -13,104 +14,414 @@ const navLinks = [
 ];
 
 export default function Navbar() {
+
   const [open, setOpen] = useState(false);
   const pathname = usePathname();
 
+
   useEffect(() => {
-    if (open) {
-      document.body.style.overflow = "hidden";
-    } else {
-      document.body.style.overflow = "auto";
-    }
+
+    document.body.style.overflow = open ? "hidden" : "auto";
 
     return () => {
       document.body.style.overflow = "auto";
     };
+
   }, [open]);
 
+
+
   return (
-    <nav className=" w-full py-2  px-3 md:px-6 flex justify-between items-center bg-white shadow-sm z-50">
-      {/* Left Logo Section - Reduced text size for mobile */}
-      <div className="flex flex-col">
-        <h1 className="text-lg md:text-[22px] font-semibold text-[#5B8291]">
-          Dr. Gaurav Jadon
-        </h1>
 
-        <div className="flex items-center gap-2 -mt-1">
-          <div className="h-[2px] w-10 md:w-14 bg-[#5B8291]"></div>
-          <span className="text-[10px] md:text-xs font-bold text-[#5B8291]">
-            Consultant Pediatrician
-          </span>
-        </div>
-      </div>
+    <motion.header
 
-      {/* CENTER LOGO - Made smaller for mobile */}
-      <div className="md:flex hidden justify-center ">
-        <img 
-          src="/drlogo.jpeg" 
-          alt="Dr Gaurav Jadon Logo" 
-          className="w-14 h-14 md:w-20 md:h-20 object-contain rounded-full p-1 md:p-2"
-        />
-      </div>
+      initial={{
+        y: -50,
+        opacity: 0
+      }}
 
-      {/* Desktop Menu */}
-      <ul className="hidden md:flex gap-8 lg:gap-10 text-[#5B8291]">
-        {navLinks.map((link) => {
-          const isActive = pathname === link.href;
+      animate={{
+        y: 0,
+        opacity: 1
+      }}
 
-          return (
-            <li key={link.name}>
-              <Link
-                href={link.href}
-                className={`${
-                  isActive
-                    ? "bg-[#2E424D] text-white px-3 py-2 rounded"
-                    : "hover:text-slate-800"
-                }`}
+      transition={{
+        duration: 0.5
+      }}
+
+      className="
+      w-full
+      bg-white
+      border-b
+      border-slate-200
+      sticky
+      top-0
+      z-50
+      "
+
+    >
+
+
+      <nav className="
+      max-w-7xl
+      mx-auto
+      h-20
+      px-5
+      md:px-8
+      flex
+      items-center
+      justify-between
+      ">
+
+
+
+        {/* Logo */}
+
+        <Link
+          href="/"
+          className="
+          flex
+          items-center
+          gap-4
+          "
+        >
+
+
+          <img
+
+            src="/drlogo.jpeg"
+
+            alt="Dr Gaurav Jadon"
+
+            className="
+            w-14
+            h-14
+            rounded-full
+            object-cover
+            border-2
+            border-cyan-100
+            "
+
+          />
+
+
+          <div>
+
+            <h1 className="
+            text-lg
+            md:text-xl
+            font-bold
+            text-slate-800
+            ">
+
+              Dr. Gaurav Jadon
+
+            </h1>
+
+
+            <p className="
+            text-sm
+            text-cyan-600
+            font-medium
+            ">
+
+              Consultant Pediatrician
+
+            </p>
+
+
+          </div>
+
+
+        </Link>
+
+
+
+
+
+
+
+        {/* Desktop Menu */}
+
+        <ul className="
+        hidden
+        md:flex
+        items-center
+        gap-9
+        ">
+
+
+          {
+            navLinks.map((link) => (
+
+              <li
+                key={link.name}
+                className="
+                relative
+                "
               >
-                {link.name}
-              </Link>
-            </li>
-          );
-        })}
-      </ul>
 
-      {/* Mobile Menu Icon */}
-      <button className="md:hidden" onClick={() => setOpen(!open)}>
-        {open ? <X size={24} /> : <Menu size={24} />}
-      </button>
 
-      {/* Mobile Dropdown */}
-      {open && (
-        <ul className="absolute top-14 right-0 bg-white shadow-lg rounded p-4 flex flex-col gap-3 w-1/2 h-screen md:hidden text-slate-600 z-50">
-          <div className="flex justify-center ">
-        <img 
-          src="/drlogo.jpeg" 
-          alt="Dr Gaurav Jadon Logo" 
-          className="w-14 h-14 md:w-20 md:h-20 object-contain rounded-full p-1 md:p-2"
-        />
-      </div>
-          {navLinks.map((link) => {
-            const isActive = pathname === link.href;
-
-            return (
-              <li key={link.name}>
                 <Link
+
                   href={link.href}
-                  className={`block ${
-                    isActive
-                      ? "bg-slate-700 text-white px-3 py-2 rounded"
-                      : "hover:text-slate-800"
-                  }`}
-                  onClick={() => setOpen(false)}
+
+                  className={`
+                  text-sm
+                  font-semibold
+                  transition-colors
+                  duration-300
+
+                  ${
+                    pathname === link.href
+                      ?
+                      "text-cyan-600"
+                      :
+                      "text-slate-600 hover:text-cyan-600"
+                  }
+
+                  `}
+
                 >
+
                   {link.name}
+
                 </Link>
+
+
+
+                {
+                  pathname === link.href &&
+
+                  <motion.span
+
+                    layoutId="active"
+
+                    className="
+                    absolute
+                    left-0
+                    right-0
+                    -bottom-3
+                    h-[3px]
+                    rounded-full
+                    bg-cyan-600
+                    "
+
+                  />
+
+                }
+
+
               </li>
-            );
-          })}
+
+            ))
+          }
+
+
         </ul>
-      )}
-    </nav>
+
+
+
+
+
+
+
+        {/* Appointment Button */}
+
+        <button
+
+          className="
+          hidden
+          md:flex
+          items-center
+          gap-2
+          bg-gradient-to-r
+          from-cyan-600
+          to-emerald-500
+          text-white
+          px-6
+          py-3
+          rounded-lg
+          font-semibold
+          shadow-md
+          hover:scale-105
+          transition
+          "
+
+        >
+
+          <Calendar size={18} />
+
+          Appointment
+
+        </button>
+
+
+
+
+
+
+
+        {/* Mobile Menu Button */}
+
+        <button
+
+          onClick={() => setOpen(!open)}
+
+          className="
+          md:hidden
+          p-2
+          rounded-lg
+          bg-slate-100
+          text-slate-700
+          "
+
+        >
+
+          {
+            open
+              ?
+              <X size={24} />
+              :
+              <Menu size={24} />
+          }
+
+
+        </button>
+
+
+
+      </nav>
+
+
+
+
+
+
+
+
+      {/* Mobile Menu */}
+
+      <AnimatePresence>
+
+
+        {
+          open &&
+
+          <motion.div
+
+            initial={{
+              height: 0,
+              opacity: 0
+            }}
+
+            animate={{
+              height: "auto",
+              opacity: 1
+            }}
+
+            exit={{
+              height: 0,
+              opacity: 0
+            }}
+
+            className="
+            md:hidden
+            border-t
+            border-slate-200
+            bg-white
+            overflow-hidden
+            "
+
+          >
+
+
+            <div className="
+            px-6
+            py-6
+            flex
+            flex-col
+            gap-5
+            ">
+
+
+
+              {
+                navLinks.map((link) => (
+
+                  <Link
+
+                    key={link.name}
+
+                    href={link.href}
+
+                    onClick={() => setOpen(false)}
+
+                    className={`
+                    text-lg
+                    font-semibold
+
+                    ${
+                      pathname === link.href
+                        ?
+                        "text-cyan-600"
+                        :
+                        "text-slate-700"
+                    }
+
+                    `}
+
+                  >
+
+                    {link.name}
+
+                  </Link>
+
+
+                ))
+              }
+
+
+
+
+
+              <button
+
+                className="
+                flex
+                items-center
+                justify-center
+                gap-2
+                bg-cyan-600
+                text-white
+                py-3
+                rounded-lg
+                font-semibold
+                "
+
+              >
+
+                <Calendar size={18} />
+
+                Book Appointment
+
+              </button>
+
+
+
+            </div>
+
+
+          </motion.div>
+
+        }
+
+
+      </AnimatePresence>
+
+
+
+    </motion.header>
+
   );
 }

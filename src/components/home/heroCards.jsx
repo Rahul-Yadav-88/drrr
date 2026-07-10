@@ -1,65 +1,99 @@
-import React from 'react';
+"use client";
+
+import { motion } from "framer-motion";
+import { MapPin, CalendarClock, PhoneCall, ArrowUpRight } from "lucide-react";
 
 const cards = [
   {
-  title: 'Hospital Location',
-  lines: [
-    'Mediclinic Welcare Hospital Dubai',
-    ' Dubai',
-    'Providing comprehensive pediatric & emergency care in a modern clinical environment.'
-  ],
-  // action: { label: 'CONTACT US', href: '/contact' }
-},
-
- {
-  title: 'Schedule an Appointment',
-  lines: [
-    // // ' Mediclinic Welcare Hospital',
-    // 'Friday & Saturday – Weekly Off',
-    // 'Sunday – 10:00 AM to 7:00 PM',
-    // 'Monday – 12:00 PM to 9:00 PM',
-    // 'Tuesday – 9:00 AM to 6:00 PM',
-    // 'Wednesday – 9:00 AM to 6:00 PM',
-    // 'Thursday – 9:00 AM to 6:00 PM',
-    // 'Please book your appointments accordingly.'
-    'Call Mediclinic toll free no 8001999 or Download Mediclinic app to book online appointment'
-],
-  action: null
-},
-
+    title: "Hospital Location",
+    icon: MapPin,
+    color: "from-cyan-500 via-sky-500 to-blue-600",
+    subtitle: "Mediclinic Welcare Hospital",
+    meta: "Dubai, UAE",
+    desc: "Providing comprehensive pediatric and emergency care in a modern healthcare environment.",
+    action: "View Location",
+    href: "#",
+  },
   {
-    title: 'Contact Details',
-    lines: [
-      'For appointments and urgent queries:',
-      '8001999',
-    ],
-    action: null
-  }
+    title: "Schedule Appointment",
+    icon: CalendarClock,
+    color: "from-emerald-500 via-teal-500 to-cyan-600",
+    subtitle: "24/7 Appointment Booking",
+    meta: "8001999",
+    desc: "Book instantly through our team or the Mediclinic App from anywhere.",
+    action: "Book Now",
+    href: "#",
+  },
+  {
+    title: "Contact Details",
+    icon: PhoneCall,
+    color: "from-violet-500 via-fuchsia-500 to-indigo-600",
+    subtitle: "Emergency & Queries",
+    meta: "☎ 8001999",
+    desc: "Our healthcare specialists are available around the clock.",
+    action: "Call Now",
+    href: "tel:8001999",
+  },
 ];
 
 export default function HeroCards() {
   return (
-    <div className="w-full  py-10 flex justify-center">
-      <div className="grid grid-cols-1 md:grid-cols-3 gap-6 max-w-6xl w-full md:px-4 md:pl-0 pl-6 px-4">
-        {cards.map((card, idx) => (
-          <div key={idx} className="bg-[#364F59] text-white p-6  shadow-lg flex flex-col justify-between">
-            <h2 className="text-xl font-semibold mb-4">{card.title}</h2>
-            <div className="space-y-1 text-sm opacity-90">
-              {card.lines.map((line, i) => (
-                <p key={i}>{line}</p>
-              ))}
-            </div>
-            {card.action && (
-              <a
-                href={card.action.href}
-                className="mt-4 inline-block items-center gap-2 px-4 py-2 border-2 border-white text-white font-medium  transition"
+    <section className="relative overflow-hidden bg-slate-950 py-24">
+      <div className="absolute -top-40 -left-40 h-96 w-96 rounded-full bg-cyan-500/20 blur-[140px]" />
+      <div className="absolute bottom-0 right-0 h-[28rem] w-[28rem] rounded-full bg-violet-500/20 blur-[160px]" />
+      <div className="mx-auto max-w-7xl px-6">
+        <div className="mb-14 text-center">
+          <p className="text-cyan-400 font-semibold tracking-[0.3em] uppercase">Healthcare</p>
+          <h2 className="mt-4 text-5xl font-black text-white">Everything You Need</h2>
+          <p className="mx-auto mt-4 max-w-2xl text-slate-400">
+            Beautiful modern cards with premium interactions and responsive layout.
+          </p>
+        </div>
+
+        <div className="grid gap-8 lg:grid-cols-3">
+          {cards.map((card, i) => {
+            const Icon = card.icon;
+            return (
+              <motion.div
+                key={i}
+                initial={{opacity:0,y:60}}
+                whileInView={{opacity:1,y:0}}
+                viewport={{once:true}}
+                transition={{duration:.6,delay:i*.15}}
+                whileHover={{y:-12}}
+                className="group relative overflow-hidden rounded-[32px] p-[1px]"
               >
-                {card.action.label}
-              </a>
-            )}
-          </div>
-        ))}
+                <div className={`absolute inset-0 bg-gradient-to-br ${card.color}`} />
+                <div className="relative h-full rounded-[31px] bg-slate-900/95 p-8 backdrop-blur-xl">
+                  <Icon className="absolute right-4 top-4 h-32 w-32 text-white/5 transition group-hover:scale-110" strokeWidth={1}/>
+                  <div className={`flex h-16 w-16 items-center justify-center rounded-2xl bg-gradient-to-br ${card.color}`}>
+                    <Icon className="h-8 w-8 text-white"/>
+                  </div>
+
+                  <h3 className="mt-8 text-3xl font-bold text-white">{card.title}</h3>
+                  <div className={`mt-5 h-1 w-16 rounded-full bg-gradient-to-r ${card.color}`}/>
+                  <p className="mt-8 text-xl font-semibold text-white">{card.subtitle}</p>
+                  <p className="mt-1 text-cyan-300">{card.meta}</p>
+                  <p className="mt-6 leading-8 text-slate-400">{card.desc}</p>
+
+                  <motion.a
+                    whileHover={{x:5}}
+                    href={card.href}
+                    className="mt-10 flex items-center justify-between rounded-2xl border border-white/10 bg-white/5 px-5 py-4 text-white"
+                  >
+                    <span className="font-semibold">{card.action}</span>
+                    <span className={`flex h-10 w-10 items-center justify-center rounded-full bg-gradient-to-r ${card.color}`}>
+                      <ArrowUpRight className="h-5 w-5 text-white"/>
+                    </span>
+                  </motion.a>
+
+                  <div className={`absolute -bottom-20 left-1/2 h-44 w-44 -translate-x-1/2 rounded-full bg-gradient-to-r ${card.color} opacity-20 blur-[90px] group-hover:opacity-40 transition`} />
+                </div>
+              </motion.div>
+            )
+          })}
+        </div>
       </div>
-    </div>
+    </section>
   );
 }

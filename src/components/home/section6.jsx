@@ -1,101 +1,109 @@
-import React from "react";
-import Link from 'next/link'
+// Section6.jsx
+"use client";
 
+import Link from "next/link";
+import { motion } from "framer-motion";
+import { HeartPulse, Baby, ShieldCheck, ArrowRight } from "lucide-react";
 
-const Section6 = () => {
-    // cardsData.js
 const cardsData = [
   {
-    title: "Children care",
+    title: "Children Care",
     image: "/card1.png",
     description:
-      "Comprehensive care for Children from 1 month to 18 years of age including management of high risk and complicated cases.",
+      "Comprehensive care for children from 1 month to 18 years including complex pediatric cases.",
+    icon: Baby,
   },
   {
     title: "General Pediatrics",
     image: "/card2.png",
     description:
-      "Complete medical care for infants, children, and adolescents—covering infections, allergies, nutrition, growth, development, vaccinations, and long-term pediatric health.",
+      "Expert care for infections, nutrition, growth, vaccinations and preventive health.",
+    icon: HeartPulse,
   },
-  // {
-  //   title: "Pediatric Intensive Care",
-  //   image: "/card3.png",
-  //   description:
-  //     "Advanced management of critically ill children, including respiratory failure, sepsis, trauma, and emergencies. Skilled in ventilation, Prdiatric Emergency Care protocols, and multidisciplinary critical care.",
-  // },
 ];
 
+export default function Section6() {
   return (
-    <div className="w-full bg-[#F7F8F9]  py-20 px-6">
-     
-      <h2 className="text-center text-2xl md:text-3xl font-semibold text-[#5B8291] mb-6">
-        Why Choose Dr. Gaurav Jadon
-      </h2>
+    <section className="relative overflow-hidden bg-gradient-to-b from-[#F7FCFD] to-white py-20">
+      <div className="absolute -left-20 top-0 h-80 w-80 rounded-full bg-cyan-200/30 blur-[120px]" />
+      <div className="absolute right-0 bottom-0 h-96 w-96 rounded-full bg-teal-200/30 blur-[150px]" />
 
-      
-      <div className="max-w-4xl mx-auto text-center md:pl-0 pl-5 text-[#5B8291] space-y-5 leading-relaxed">
-        <p>
-          Dr. Gaurav Jadon brings 28 years of pediatric expertise across India,
-          Kuwait, and the UAE. His practice blends clinical excellence,
-          compassion, and evidence-based care, making him a trusted pediatrician
-          for families across the region.
-        </p>
+      <div className="mx-auto max-w-7xl px-6">
 
-        <p>
-          With strong expertise in General Pediatrics, he has managed a wide range of complex infants and
-          children from 1 month of age to 18 years and childhood conditions. Dr. Jadon has cared for premature
-          babies, critically ill children, and acute emergencies while guiding
-          routine pediatric care, growth monitoring, and preventive health.
-        </p>
+        <motion.div
+          initial={{opacity:0,y:40}}
+          whileInView={{opacity:1,y:0}}
+          viewport={{once:true}}
+          transition={{duration:.7}}
+          className="text-center"
+        >
+          <span className="rounded-full bg-cyan-100 px-5 py-2 text-cyan-700 font-semibold">
+            Why Choose Dr. Gaurav Jadon
+          </span>
 
-        <p>
-          In addition to his clinical work, he has played an active role in
-          training medical residents, leading clinical audits, and contributing
-          to international research. His commitment to quality improvement
-          reflects his dedication to raising pediatric care standards.
-        </p>
+          <h2 className="mt-6 text-5xl font-black text-slate-900">
+            Trusted Pediatric Care
+          </h2>
 
-        <p>
-          He offers expert care across a broad spectrum of pediatric and
-          providing comprehensive support from infancy
-          through adolescence.
-        </p>
+          <p className="mx-auto mt-6 max-w-4xl text-lg leading-8 text-slate-600">
+            28+ years of international pediatric experience across India,
+            Kuwait and the UAE delivering compassionate, evidence‑based care.
+          </p>
+        </motion.div>
+
+        <div className="mt-16 grid gap-8 md:grid-cols-2">
+          {cardsData.map((card,index)=>{
+            const Icon=card.icon;
+            return(
+              <motion.div
+                key={index}
+                initial={{opacity:0,y:40}}
+                whileInView={{opacity:1,y:0}}
+                whileHover={{y:-8,scale:1.02}}
+                viewport={{once:true}}
+                transition={{delay:index*0.15}}
+                className="overflow-hidden rounded-[30px] bg-white shadow-xl border border-slate-200"
+              >
+                <div className="relative overflow-hidden">
+                  <img src={card.image} className="h-64 w-full object-cover transition duration-500 hover:scale-110" alt={card.title}/>
+                  <div className="absolute left-6 bottom-6 flex h-16 w-16 items-center justify-center rounded-2xl bg-gradient-to-r from-cyan-500 to-teal-500 text-white shadow-xl">
+                    <Icon size={28}/>
+                  </div>
+                </div>
+
+                <div className="p-8">
+                  <h3 className="text-2xl font-bold text-slate-900">{card.title}</h3>
+                  <p className="mt-4 leading-8 text-slate-600">{card.description}</p>
+
+                  <div className="mt-6 flex items-center gap-2 text-cyan-600 font-semibold">
+                    Learn More <ArrowRight size={18}/>
+                  </div>
+                </div>
+              </motion.div>
+            )
+          })}
+        </div>
+
+        <motion.div
+          initial={{opacity:0}}
+          whileInView={{opacity:1}}
+          viewport={{once:true}}
+          className="mt-16 rounded-[32px] bg-gradient-to-r from-cyan-600 to-teal-600 p-10 text-center text-white"
+        >
+          <ShieldCheck className="mx-auto mb-4" size={42}/>
+          <h3 className="text-3xl font-black">Compassion • Experience • Excellence</h3>
+          <p className="mx-auto mt-4 max-w-3xl text-cyan-50">
+            Comprehensive pediatric support from infancy through adolescence.
+          </p>
+
+          <Link href="/services">
+            <button className="mt-8 rounded-full bg-white px-8 py-4 font-semibold text-cyan-700 shadow-lg hover:scale-105 transition">
+              Explore Services
+            </button>
+          </Link>
+        </motion.div>
+
       </div>
-
-      
-      <div className="grid grid-cols-1 md:grid-cols-2 md:pl-0 pl-2 gap-6 max-w-5xl mx-auto mt-16">
-
-        {cardsData.map((card, index) => (
-          <div
-            key={index}
-            className="bg-[#E8E8E8] rounded-xl shadow-sm hover:shadow-md transition p-5"
-          >
-            <img
-              src={card.image}
-              alt={card.title}
-              className="w-full h-48 object-cover rounded-lg mb-4"
-            />
-
-            <h3 className="font-bold text-xl mb-2">{card.title}</h3>
-
-            <p className="text-[#5B8291] text-lg leading-relaxed">
-              {card.description}
-            </p>
-          </div>
-        ))}
-
-      </div>
-
-     
-      <div className="flex justify-center mt-10">
-        <Link href="/services">
-  <button className="mt-8 bg-[#29495E] text-white px-8 py-3 rounded-md text-sm tracking-widest hover:bg-[#1f3747] transition">
-    READ MORE
-  </button>
-</Link>
-      </div>
-    </div>
+    </section>
   );
-};
-
-export default Section6;
+}
