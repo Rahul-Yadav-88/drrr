@@ -12,7 +12,7 @@ export default function SpecialtySection() {
       img: "/img1.png",
     },
     {
-      title: "Care of Children from 1 Month to 18 Years",
+      title: "Care for Children up to 18 Years",
       desc: "Routine checkups, growth monitoring, developmental assessment and preventive healthcare.",
       img: "/img4.png",
     },

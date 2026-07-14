@@ -12,7 +12,7 @@ export default function Section1() {
       img: "/1.avif",
     },
     {
-      title: "Expert Care of Children from 1 Month to 18 Years",
+      title: "Expert Care for Children up to 18 Years",
       desc: "Expert care for newborns, infants, children and adolescents requiring specialized monitoring, preventive care and advanced pediatric treatment.",
       img: "/2.jpg",
     },
@@ -62,10 +62,10 @@ export default function Section1() {
             <span className="font-semibold text-sky-700"> 28 years </span>
             of clinical expertise across India, Kuwait and the UAE,
             Dr. Gaurav Jadon provides compassionate, evidence-based
-            healthcare for children from
+            healthcare for children
             <span className="font-semibold text-sky-700">
               {" "}
-              1 month to 18 years
+              up to 18 years
             </span>
             . His patient-first approach focuses on early diagnosis,
             preventive healthcare and personalized treatment for
