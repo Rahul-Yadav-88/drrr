@@ -34,28 +34,28 @@ const socialLinks = [
 
 
 const fadeUp = {
-  hidden:{
-    opacity:0,
-    y:40
+  hidden: {
+    opacity: 0,
+    y: 40
   },
 
-  show:{
-    opacity:1,
-    y:0,
-    transition:{
-      duration:.7
+  show: {
+    opacity: 1,
+    y: 0,
+    transition: {
+      duration: .7
     }
   }
 };
 
 
 
-export default function Footer(){
+export default function Footer() {
 
 
-return (
+  return (
 
-<footer className="
+    <footer className="
 relative
 overflow-hidden
 bg-gradient-to-b
@@ -69,9 +69,9 @@ pb-8
 ">
 
 
-{/* Background Glow */}
+      {/* Background Glow */}
 
-<div className="
+      <div className="
 absolute
 top-0
 left-0
@@ -83,7 +83,7 @@ blur-[120px]
 "/>
 
 
-<div className="
+      <div className="
 absolute
 bottom-0
 right-0
@@ -97,24 +97,24 @@ blur-[140px]
 
 
 
-{/* Social Sidebar */}
+      {/* Social Sidebar */}
 
 
-<motion.div
+      <motion.div
 
-initial={{
-x:-100
-}}
+        initial={{
+          x: -100
+        }}
 
-animate={{
-x:0
-}}
+        animate={{
+          x: 0
+        }}
 
-transition={{
-duration:.8
-}}
+        transition={{
+          duration: .8
+        }}
 
-className="
+        className="
 fixed
 left-0
 top-1/2
@@ -128,58 +128,58 @@ rounded-r-2xl
 shadow-2xl
 "
 
->
+      >
 
 
-{socialLinks.map((item,index)=>{
+        {socialLinks.map((item, index) => {
 
-const Icon=item.icon;
+          const Icon = item.icon;
 
 
-return (
+          return (
 
-<a
-key={index}
-href={item.link}
-target="_blank"
-rel="noopener noreferrer"
-className={`
+            <a
+              key={index}
+              href={item.link}
+              target="_blank"
+              rel="noopener noreferrer"
+              className={`
 ${item.bg}
 p-4
 transition-all
 duration-300
 hover:pl-7
 `}
->
+            >
 
-<Icon className="text-white w-6 h-6"/>
+              <Icon className="text-white w-6 h-6" />
 
-</a>
+            </a>
 
-)
+          )
 
-})}
-
-
-</motion.div>
+        })}
 
 
+      </motion.div>
 
 
 
 
 
-{/* Top Cards */}
 
 
-<motion.div
+      {/* Top Cards */}
 
-variants={fadeUp}
-initial="hidden"
-whileInView="show"
-viewport={{once:true}}
 
-className="
+      <motion.div
+
+        variants={fadeUp}
+        initial="hidden"
+        whileInView="show"
+        viewport={{ once: true }}
+
+        className="
 max-w-7xl
 mx-auto
 grid
@@ -189,34 +189,34 @@ gap-6
 "
 
 
->
+      >
 
 
-{[
+        {[
 
-{
-title:"Find a clinic near you",
-text:"Find Us On Map"
-},
+          {
+            title: "Find a clinic near you",
+            text: "Find Us On Map"
+          },
 
-{
-title:"Feel free to message us!",
-text:"Send an Email"
-},
+          {
+            title: "Feel free to message us!",
+            text: "Send an Email"
+          },
 
-{
-title:"Book an appointment",
-text:"8001999"
-}
+          {
+            title: "Book an appointment",
+            text: "0505870574"
+          }
 
-].map((item,index)=>(
+        ].map((item, index) => (
 
 
-<div
+          <div
 
-key={index}
+            key={index}
 
-className="
+            className="
 group
 rounded-3xl
 border
@@ -231,56 +231,56 @@ duration-500
 shadow-xl
 "
 
->
+          >
 
 
-<h4 className="
+            <h4 className="
 text-[#98DAD9]
 font-semibold
 text-lg
 ">
 
-{item.title}
+              {item.title}
 
-</h4>
+            </h4>
 
 
-<p className="
+            <p className="
 mt-2
 text-white/70
 ">
 
-{item.text}
+              {item.text}
 
-</p>
-
-
-</div>
+            </p>
 
 
-))}
+          </div>
+
+
+        ))}
 
 
 
-</motion.div>
-
-
+      </motion.div>
 
 
 
 
 
-{/* Main Content */}
 
 
-<motion.div
+      {/* Main Content */}
 
-variants={fadeUp}
-initial="hidden"
-whileInView="show"
-viewport={{once:true}}
 
-className="
+      <motion.div
+
+        variants={fadeUp}
+        initial="hidden"
+        whileInView="show"
+        viewport={{ once: true }}
+
+        className="
 max-w-7xl
 mx-auto
 mt-16
@@ -291,108 +291,101 @@ gap-12
 "
 
 
->
+      >
 
 
-{/* About */}
+        {/* About */}
 
 
-<div>
+        <div>
 
 
-<h3 className="
+          <h3 className="
 text-3xl
 font-bold
 text-[#5B8291]
 mb-5
 ">
 
-About Us
+            About Us
 
-</h3>
+          </h3>
 
 
-<p className="
+          <p className="
 text-white/70
 leading-8
 ">
 
-Dr. Gaurav Jadon is an experienced Consultant Pediatrician with
-28 years of clinical practice across India, Kuwait, and the UAE.
-He specializes in General Pediatrics and Pediatric emergency,
-providing safe, compassionate, and evidence-based care for children
-up to 18 years.
+            Dr. Gaurav Jadon is an experienced Consultant Pediatrician with
+            28 years of clinical practice across India, Kuwait, and the UAE.
+            He specializes in General Pediatrics and Pediatric emergency,
+            providing safe, compassionate, and evidence-based care for children
+            up to 18 years.
 
-</p>
-
-
-</div>
+          </p>
 
 
+        </div>
 
 
 
 
-{/* Contact */}
 
 
-<div>
+        {/* Contact */}
 
 
-<h3 className="
+        <div>
+
+
+          <h3 className="
 text-3xl
 font-bold
 text-[#5B8291]
 mb-5
 ">
 
-Get In Touch
+            Get In Touch
 
-</h3>
-
-
-<div className="space-y-5 text-white/70">
+          </h3>
 
 
-<p className="flex gap-3">
-
-<MapPin/>
-Mediclinic Welcare Hospital opp Gems
-
-</p>
+          <div className="space-y-5 text-white/70">
 
 
-<p className="flex gap-3">
+            <p className="flex gap-3">
 
-<Mail/>
+              <MapPin />
+              Mediclinic Welcare Hospital opp Gems
 
-<a href="mailto:Gaurav.jadon@mediclinic.ae">
-Gaurav.jadon@mediclinic.ae
-</a>
-
-</p>
+            </p>
 
 
-<p className="flex gap-3">
+            <p className="flex gap-3">
 
-<Phone/>
-8001999
+              <Mail />
 
-</p>
+              <a href="mailto:Gaurav.jadon@mediclinic.ae">
+                Gaurav.jadon@mediclinic.ae
+              </a>
 
-
-<p className="flex gap-3">
-
-<Phone/>
-0505870574
-
-</p>
+            </p>
 
 
-</div>
+
+            <p className="flex gap-3">
+
+              <Phone />
+              0505870574
+
+            </p>
 
 
-</div>
+          </div>
+
+
+        </div>
 
 
 
@@ -400,90 +393,90 @@ Gaurav.jadon@mediclinic.ae
 
 
 
-{/* Links */}
+        {/* Links */}
 
 
-<div>
+        <div>
 
 
-<h3 className="
+          <h3 className="
 text-3xl
 font-bold
 text-[#5B8291]
 mb-5
 ">
 
-Quick Links
+            Quick Links
 
-</h3>
+          </h3>
 
 
-<ul className="
+          <ul className="
 space-y-4
 text-white/70
 ">
 
 
-<li>
-<Link href="/services">
-→ Services
-</Link>
-</li>
+            <li>
+              <Link href="/services">
+                → Services
+              </Link>
+            </li>
 
 
-<li>
-<Link href="/about">
-→ About
-</Link>
-</li>
+            <li>
+              <Link href="/about">
+                → About
+              </Link>
+            </li>
 
 
-<li>
-<Link href="/contact">
-→ Contact
-</Link>
-</li>
+            <li>
+              <Link href="/contact">
+                → Contact
+              </Link>
+            </li>
 
 
-</ul>
+          </ul>
 
 
-</div>
+        </div>
 
 
-</motion.div>
-
-
-
+      </motion.div>
 
 
 
 
 
 
-{/* Appointment */}
 
 
 
-<motion.div
+      {/* Appointment */}
 
-initial={{
-opacity:0,
-scale:.9
-}}
 
-whileInView={{
-opacity:1,
-scale:1
-}}
 
-transition={{
-duration:.8
-}}
+      <motion.div
 
-viewport={{once:true}}
+        initial={{
+          opacity: 0,
+          scale: .9
+        }}
 
-className="
+        whileInView={{
+          opacity: 1,
+          scale: 1
+        }}
+
+        transition={{
+          duration: .8
+        }}
+
+        viewport={{ once: true }}
+
+        className="
 max-w-4xl
 mx-auto
 mt-20
@@ -497,10 +490,10 @@ md:p-12
 "
 
 
->
+      >
 
 
-<h3 className="
+        <h3 className="
 text-3xl
 font-bold
 text-[#5B8291]
@@ -508,56 +501,56 @@ text-center
 mb-8
 ">
 
-Schedule An Appointment
+          Schedule An Appointment
 
-</h3>
-
-
-
-<form className="grid gap-5">
-
-
-<div className="grid md:grid-cols-2 gap-5">
-
-<input
-placeholder="First Name"
-className="inputStyle"
-/>
-
-
-<input
-placeholder="Last Name"
-className="inputStyle"
-/>
-
-
-</div>
+        </h3>
 
 
 
-<div className="grid md:grid-cols-2 gap-5">
-
-<input
-placeholder="Phone Number"
-className="inputStyle"
-/>
+        <form className="grid gap-5">
 
 
-<input
-placeholder="Email"
-className="inputStyle"
-/>
+          <div className="grid md:grid-cols-2 gap-5">
+
+            <input
+              placeholder="First Name"
+              className="inputStyle"
+            />
 
 
-</div>
+            <input
+              placeholder="Last Name"
+              className="inputStyle"
+            />
+
+
+          </div>
 
 
 
-<Link href="/contact">
+          <div className="grid md:grid-cols-2 gap-5">
+
+            <input
+              placeholder="Phone Number"
+              className="inputStyle"
+            />
 
 
-<button
-className="
+            <input
+              placeholder="Email"
+              className="inputStyle"
+            />
+
+
+          </div>
+
+
+
+          <Link href="/contact">
+
+
+            <button
+              className="
 mx-auto
 flex
 items-center
@@ -570,33 +563,33 @@ hover:scale-105
 transition
 "
 
->
+            >
 
-Submit
+              Submit
 
-<ArrowRight size={18}/>
+              <ArrowRight size={18} />
 
-</button>
-
-
-</Link>
+            </button>
 
 
-</form>
+          </Link>
 
 
-</motion.div>
+        </form>
 
 
+      </motion.div>
 
 
 
 
 
-{/* Bottom */}
 
 
-<div className="
+      {/* Bottom */}
+
+
+      <div className="
 border-t
 border-white/20
 mt-12
@@ -612,35 +605,35 @@ text-sm
 ">
 
 
-<p>
-© 2023 Dr. Gaurav Jadon. All rights reserved.
-</p>
+        <p>
+          © 2023 Dr. Gaurav Jadon. All rights reserved.
+        </p>
 
 
-<div className="flex gap-5">
+        <div className="flex gap-5">
 
-<Link href="#">
-Privacy
-</Link>
+          <Link href="#">
+            Privacy
+          </Link>
 
-<Link href="#">
-Terms
-</Link>
+          <Link href="#">
+            Terms
+          </Link>
 
-<Link href="#">
-Sitemap
-</Link>
-
-
-</div>
+          <Link href="#">
+            Sitemap
+          </Link>
 
 
-</div>
+        </div>
+
+
+      </div>
 
 
 
-</footer>
+    </footer>
 
-)
+  )
 
 }

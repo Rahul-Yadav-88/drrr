@@ -125,7 +125,7 @@ export default function Section5() {
                   </p>
 
                   <h3 className="text-3xl font-black text-slate-900">
-                    800 1999
+                    0505870574
                   </h3>
 
                 </div>
