@@ -138,7 +138,7 @@ export default function ContactSection() {
                 <Phone className="text-cyan-600" />
                 <div>
                   <p className="font-semibold">Phone</p>
-                  <p className="text-gray-500">8001999</p>
+                  <p className="text-gray-500">0505870574</p>
                 </div>
               </motion.div>
 
