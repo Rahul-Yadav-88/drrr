@@ -223,11 +223,11 @@ export default function ContactSection() {
             <div>
 
               <h4 className="font-bold text-slate-800">
-                Mediclinic Welcare
+                Mediclinic Welcare Hospital
               </h4>
 
               <p className="text-gray-500 text-sm">
-                Dubai Healthcare City
+                Al Garhoud, Dubai.
               </p>
 
             </div>
