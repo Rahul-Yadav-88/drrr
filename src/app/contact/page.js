@@ -222,9 +222,9 @@ export default function ContactSection() {
 
             <div>
 
-              <h4 className="font-bold text-slate-800">
+              {/* <h4 className="font-bold text-slate-800">
                 Mediclinic Welcare Hospital
-              </h4>
+              </h4> */}
 
               <p className="text-gray-500 text-sm">
                 Al Garhoud, Dubai.
