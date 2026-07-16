@@ -50,7 +50,7 @@ export default function HeroSection() {
           <h2 className="text-3xl font-bold text-white mt-4">Dr. Gaurav Jadon</h2>
 
           <p className="mt-6 text-lg text-gray-300 max-w-xl leading-8">
-            Expert in General Pediatrics (1 month–18 years). Dedicated to safe,
+            Expert in General Pediatrics (up to 18 years). Dedicated to safe,
             compassionate and evidence-based child healthcare.
           </p>
 

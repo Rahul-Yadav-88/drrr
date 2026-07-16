@@ -357,7 +357,7 @@ mb-5
             <p className="flex gap-3">
 
               <MapPin />
-              Mediclinic Welcare Hospital opp Gems
+              Garhoud Dubai UAE
 
             </p>
 
@@ -366,8 +366,8 @@ mb-5
 
               <Mail />
 
-              <a href="mailto:Gaurav.jadon@mediclinic.ae">
-                Gaurav.jadon@mediclinic.ae
+              <a href="mailto:seemagauravansh@gmail.com">
+                seemagauravansh@gmail.com
               </a>
 
             </p>

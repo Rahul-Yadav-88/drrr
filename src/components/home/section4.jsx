@@ -23,8 +23,8 @@ const expertise = [
   },
   {
     icon: Stethoscope,
-    title: "Childhood Asthma",
-    desc: "Long-term asthma management and respiratory care.",
+    title: "Comprehensive care",
+    desc: "Comprehensive care for Children up to 18 years",
   },
   {
     icon: ShieldCheck,

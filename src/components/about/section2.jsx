@@ -18,7 +18,7 @@ const floatingIcons = [
 
 const timeline = [
   "28 years of clinical practice across India, Kuwait and UAE.",
-  "Expert in General Pediatrics from 1 month to 18 years.",
+  "Expert in General Pediatrics from birth to 18 years",
   "Managed pediatric emergencies and complex critical cases.",
   "Research, teaching and international medical conferences.",
   "Published scientific papers in reputed PubMed journals."
