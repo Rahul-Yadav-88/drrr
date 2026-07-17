@@ -80,10 +80,7 @@ export default function Section5() {
                 </h2>
 
                 <p className="mt-4 max-w-2xl text-lg leading-8 text-slate-200">
-                  If your child requires urgent medical attention,
-                  contact our emergency team immediately.
-                  We're available 24 hours a day to provide
-                  expert pediatric care.
+                 If your child requires urgent medical attention Contact.
                 </p>
 
               </div>
@@ -121,7 +118,7 @@ export default function Section5() {
                 <div>
 
                   <p className="text-sm uppercase tracking-widest text-slate-500">
-                    Emergency Helpline
+                    Contact on:
                   </p>
 
                   <h3 className="text-3xl font-black text-slate-900">
@@ -132,7 +129,7 @@ export default function Section5() {
 
               </motion.a>
 
-              <Link href="/contact">
+              {/* <Link href="/contact">
 
                 <motion.button
                   whileHover={{
@@ -160,7 +157,7 @@ export default function Section5() {
 
                 </motion.button>
 
-              </Link>
+              </Link> */}
 
             </div>
 

@@ -14,7 +14,7 @@ const expertise = [
   {
     icon: Baby,
     title: "General Pediatrics",
-    desc: "Comprehensive care for children from 1 month to 18 years.",
+    desc: "Comprehensive care for children up to 18 years.",
   },
   {
     icon: HeartPulse,

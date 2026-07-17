@@ -10,7 +10,7 @@ const cardsData = [
     title: "Children Care",
     image: "/card1.png",
     description:
-      "Comprehensive care for children from 1 month to 18 years including complex pediatric cases.",
+      "Comprehensive care for children up to 18 years including complex pediatric cases.",
     icon: Baby,
   },
   {

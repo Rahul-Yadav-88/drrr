@@ -205,11 +205,7 @@ const Section8 = () => {
             {" "}across India, Kuwait, and the UAE. He specializes in General
             Pediatrics, combining clinical expertise with academic leadership.
 
-            Certified by the European Board of Pediatrics, Dr. Jadon serves at{" "}
-
-            <span className="font-semibold text-white">
-              Mediclinic Welcare Hospital Dubai.
-            </span>
+            Certified by the European Board of Pediatrics. 
 
             {" "}He actively contributes to teaching, clinical audits, and
             international research forums. Passionate about pediatric education

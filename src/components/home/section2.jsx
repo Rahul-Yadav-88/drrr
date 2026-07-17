@@ -145,12 +145,12 @@ export default function Section2() {
                 {
                   icon: ShieldCheck,
                   title: "International Expertise",
-                  desc: "European Board Certified with over 14.5 years at NMC Specialty Hospital Dubai."
+                  desc: "European Board Certified over 28 years of experience in India ,Kuwait ,UAE including recent 14.5 years in NMC Speciality Hospital Dubai "
                 },
                 {
                   icon: Award,
                   title: "Current Practice",
-                  desc: "Consultant Pediatrician at Mediclinic Welcare Hospital, Garhoud, Dubai."
+                  desc: "Consultant Pediatrician, Dubai, UAE, 0505870574"
                 },
               ].map((item, index) => (
                 <motion.div
