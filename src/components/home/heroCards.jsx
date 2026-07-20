@@ -20,7 +20,7 @@ const cards = [
     color: "from-emerald-500 via-teal-500 to-cyan-600",
     subtitle: "Consultant Pediatrician, Dubai UAE",
     meta: "0505870574",
-    desc: "Consultant Pediatrician at Mediclinic Welcare Hospital, Garhoud, Dubai.",
+    // desc: "Consultant Pediatrician at Mediclinic Welcare Hospital, Garhoud, Dubai.",
     showButton: false, // Book Now removed
   },
   {

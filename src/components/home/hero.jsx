@@ -16,12 +16,13 @@ const HeroSection = () => {
         className="absolute inset-0"
       >
         <Image
-          src="/pp.jpeg"
-          alt="Dr Gaurav Jadon"
-          fill
-          priority
-          className="object-cover object-[65%_center]"
-        />
+  src="/pp.jpeg"
+  alt="Dr Gaurav Jadon"
+  fill
+  priority
+  sizes="100vw"
+  className="object-cover object-center md:object-[65%_center]"
+/>
       </motion.div>
 
 

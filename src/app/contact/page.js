@@ -109,7 +109,7 @@ export default function ContactSection() {
             {/* CTA */}
             <div className="rounded-3xl bg-gradient-to-r from-cyan-600 to-sky-600 text-white p-6 mt-8">
               <h4 className="text-2xl font-bold">
-                Book an Appointment
+                Contact for expert Pediatric care 
               </h4>
 
               <p className="mt-2 opacity-90">
@@ -127,7 +127,7 @@ export default function ContactSection() {
                 </p>
               </div>
 
-              <div className="bg-slate-50 rounded-3xl p-5">
+              <div className="bg-slate-50 rounded-3xl p-2">
                 <Mail className="text-cyan-600 mb-3" />
 
                 <p className="font-semibold break-all">
@@ -135,13 +135,13 @@ export default function ContactSection() {
                 </p>
               </div>
 
-              <div className="bg-slate-50 rounded-3xl p-5 col-span-2">
+              {/* <div className="bg-slate-50 rounded-3xl p-5 col-span-2">
                 <MapPin className="text-cyan-600 mb-3" />
 
                 <p>
                   Garhoud Dubai UAE
                 </p>
-              </div>
+              </div> */}
             </div>
           </div>
 

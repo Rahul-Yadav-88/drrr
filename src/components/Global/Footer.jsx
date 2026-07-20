@@ -25,7 +25,7 @@ return(
 <h2 className="text-4xl font-bold mt-5">Your Child Deserves Exceptional Care</h2>
 <p className="text-white/70 mt-4 max-w-2xl mx-auto">Book a consultation with Dr. Gaurav Jadon for compassionate, evidence‑based pediatric care.</p>
 <div className="flex justify-center gap-4 mt-8 flex-wrap">
-<Link href="/contact" className="rounded-full bg-cyan-500 px-8 py-4 font-semibold flex items-center gap-2">Book Appointment<ArrowRight size={18}/></Link>
+{/* <Link href="/contact" className="rounded-full bg-cyan-500 px-8 py-4 font-semibold flex items-center gap-2">Book Appointment<ArrowRight size={18}/></Link> */}
 <a href="tel:0505870574" className="rounded-full border border-white/20 px-8 py-4">Call Now</a>
 </div></div>
 <div className="grid grid-cols-2 md:grid-cols-4 gap-6 py-14">{stats.map(([n,l])=><motion.div whileHover={{y:-5}} key={l} className="rounded-3xl bg-white/5 border border-white/10 p-6 text-center"><div className="text-4xl font-bold text-cyan-300">{n}</div><div className="text-white/70 mt-2">{l}</div></motion.div>)}</div>
