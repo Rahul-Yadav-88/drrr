@@ -13,7 +13,7 @@ import HeroCards from '../../components/home/heroCards'
 const Home = () => {
   return (
     <div className='z-40'>
-      <OrthopaedicSection/>
+      <OrthopaedicSection />
       <HeroCards/>
       <Section2/>
       <Section3/>

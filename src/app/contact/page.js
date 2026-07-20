@@ -118,7 +118,7 @@ export default function ContactSection() {
             </div>
 
             {/* Contact Info */}
-            <div className="grid grid-cols-2 gap-4 mt-8">
+            <div className="grid md:grid-cols-2 grid-rows-2 gap-4 mt-8">
               <div className="bg-slate-50 rounded-3xl p-5">
                 <Phone className="text-cyan-600 mb-3" />
 
