@@ -157,11 +157,11 @@ export default function ImageCarousel({
         <div>
           <p className="mb-2 flex items-center gap-2 font-mono text-xs uppercase tracking-widest text-cyan-600">
             <span className="inline-block h-1.5 w-1.5 rounded-full bg-cyan-600" />
-            Facility gallery
+            Gallery
           </p>
 
           <h2 className="text-3xl font-bold text-cyan-700 sm:text-4xl">
-            A closer look at our wards
+            A closer look
           </h2>
         </div>
 
