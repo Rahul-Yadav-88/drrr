@@ -89,7 +89,7 @@ export default function Navbar() {
 
           <img
 
-            src="/drlogo.jpeg"
+            src="/logo.png"
 
             alt="Dr Gaurav Jadon"
 
